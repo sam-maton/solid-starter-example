@@ -1,3 +1,4 @@
+// @refresh reload
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
@@ -8,6 +9,8 @@ export default function App() {
     <Router
       root={props => (
         <>
+          <a href="/">Index</a>
+          <a href="/about">About</a>
           <Suspense>{props.children}</Suspense>
         </>
       )}

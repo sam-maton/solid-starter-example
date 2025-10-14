@@ -1,10 +1,12 @@
-declare namespace NodeJS {
-  interface ProcessEnv {
-    readonly DATABASE_URL: string;
-    readonly DATABASE_USER: string;
-    readonly DATABASE_PASSWORD: string;
-    readonly DATABASE_NAME: string;
-    readonly DATABASE_HOST: string;
-    readonly DATABASE_PORT: string;
-  }
+/// <reference types="vinxi/types/client" />
+
+interface ImportMetaEnv {
+  DB_URL: string;
+  DB_MIGRATIONS_URL: string;
+  SITE_NAME: string;
+  SESSION_SECRET: string;
+}
+  
+interface ImportMeta {
+  readonly env: ImportMetaEnv
 }
